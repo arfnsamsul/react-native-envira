@@ -10,7 +10,7 @@
 }
 RCT_EXPORT_MODULE()
 
-RCT_EXTERN_METHOD(testing)
+RCT_EXPORT_METHOD(addEvent)
 {
     RCTLogInfo(@"Pretending to create an event");
 }

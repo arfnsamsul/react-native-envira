@@ -1,13 +1,10 @@
+// flow weak
 
-import { NativeModules } from 'react-native';
+import { Platform }     from 'react-native';
 
-const { RNEnvira } = NativeModules;
+const RNiBeaconsModule = Platform.select({
+  ios:      () => require('./lib/next/new.module.ios.js'),
+  android:  () => require('./lib/next/new.module.android.js')
+})();
 
-export default RNEnvira;
-
-
-// export default {
-//     addEvent: function () {
-//         RNEnvira.addEvent();
-//     },
-// };
+export default RNiBeaconsModule;

@@ -37,6 +37,7 @@ RCT_EXPORT_MODULE()
     self.locationManager.delegate = self;
     self.locationManager.pausesLocationUpdatesAutomatically = NO;
     self.dropEmptyRanges = NO;
+    self.locationManager.allowsBackgroundLocationUpdates = YES;
   }
 
   return self;
